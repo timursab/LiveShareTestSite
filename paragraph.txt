@@ -1,9 +1,7 @@
-Tripaholic
+#AppName
 
 Sometimes in life we get bored and for those times Tripaholic is the solution.
 With Tripaholic you can book a weekend trip for as low as $100 and live life to its fullest extent
 
 
 Trippism  is an ideology wich everybody goes on holiday
-
-
