@@ -11,6 +11,49 @@ body{
     margin: 0;
     background-color: #FEF9EF;
 }
+#items{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#s1{
+    padding: 10px;
+    font-size: 25px;
+}
+#s2{
+    padding: 10px;
+    font-size: 25px;
+}
+#s3{
+    padding: 10px;
+    font-size: 25px;
+}
+#s1container{
+    background-color: #DD4A48;
+    width: 500px;
+    border-radius: 10px;
+    outline: 8px solid #FF865E;
+    margin: 20px;
+    transition: 0.2s;
+}
+#s2container{
+    background-color: #DD4A48;
+    width: 500px;
+    border-radius: 10px;
+    outline: 8px solid #FF865E;
+    margin: 20px;
+    transition: 0.2s;
+
+    height: 400px;
+}
+#s3container{
+    background-color: #DD4A48;
+    width: 500px;
+    border-radius: 10px;
+    outline: 8px solid #FF865E;
+    margin: 20px;
+    transition: 0.2s;
+}
 .material-icons-outlined{
     font-size: 100%;
     line-height: 48px;
@@ -27,9 +70,6 @@ nav{
 h1{
     text-align: left;
     font-size: 50px;
-}
-p{
-    font-size: 20px;
 }
 
 span{
@@ -80,12 +120,13 @@ a{
     line-height: 48px;
     font-size: 40px;
     transition: 0.2s;
-    
+    width: 200px;
 }
 
 @media only screen and (max-width: 700px) {
     .pageName{
         font-size: 25px;
+        width: 120px;
     }
     .button{
         font-size: 18px;
@@ -94,4 +135,5 @@ a{
     p{
         font-size: 18px;
     }
+
   }
