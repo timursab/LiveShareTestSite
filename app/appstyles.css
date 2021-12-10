@@ -1,5 +1,5 @@
 :root{
-    --loadingprogress: 5%;
+    --loadingprogress: 0%;
 }
 
 body {
@@ -61,4 +61,8 @@ body {
     width: var(--loadingprogress);
     height: 30px;
     
+}
+
+button{
+    user-select: none;
 }
