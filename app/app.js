@@ -1,6 +1,6 @@
 
- var holding = false;
-
+var holding = false;
+var canCallBarFull = true;
 class Click {
      /**
       * 
@@ -49,21 +49,44 @@ class Click {
          new Click(target,callback);
      }
 
- }
+}
 
 
 
  const myButton = document.getElementById("myButton");
 
  var r = document.querySelector(':root');
- var barProgress = 5;
+ var barProgress = 0;
  Click.apply(myButton,()=>{
-    r.style.setProperty("--loadingprogress",barProgress.toString() + "%");
-    barProgress += 5;
+    console.log("Pressed");
 });
 
-loop();
 
- function loop(){
+//BarProgress Animations
+setInterval(() => {
+    if(holding){
+        if(barProgress < 100){
+            barProgress += 1;
+        }
+    }
+    else{
+        if(barProgress > 0){
+            barProgress -= 1;
+        }
+    }
+    r.style.setProperty("--loadingprogress",barProgress.toString() + "%");
 
- }
+
+}, 10);
+
+//BarProgressCheck
+setInterval(() => {
+    if(barProgress <= 0 && ! canCallBarFull){
+        canCallBarFull = true;
+    }
+
+    if(barProgress >= 100 && canCallBarFull){
+        console.log("BarFull");
+        canCallBarFull = false;
+    }
+}, 50);
